@@ -88,6 +88,8 @@ static const box_t boxes[CHECKBOX_ITEM_COUNT + 1] = {
     { BOXUSER4, "USER4", BOX_PERMANENT_ID_USER4 },
     { BOXLOITERDIRCHN, "LOITER CHANGE", 49 },
     { BOXMSPRCOVERRIDE, "MSP RC OVERRIDE", 50 },
+    { BOXPREARM, "PREARM", 51 },
+    { BOXFLIPOVERAFTERCRASH, "TURTLE", 52 },
     { CHECKBOX_ITEM_COUNT, NULL, 0xFF }
 };
 
@@ -305,6 +307,10 @@ void initActiveBoxIds(void)
 
 #if defined(USE_RX_MSP) && defined(USE_MSP_RC_OVERRIDE)
     activeBoxIds[activeBoxIdCount++] = BOXMSPRCOVERRIDE;
+#endif
+
+#ifdef USE_DSHOT
+    activeBoxIds[activeBoxIdCount++] = BOXFLIPOVERAFTERCRASH;
 #endif
 }
 
