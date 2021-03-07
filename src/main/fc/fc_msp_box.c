@@ -291,6 +291,8 @@ void initActiveBoxIds(void)
     // USER modes are only used for PINIO at the moment
     activeBoxIds[activeBoxIdCount++] = BOXUSER1;
     activeBoxIds[activeBoxIdCount++] = BOXUSER2;
+    activeBoxIds[activeBoxIdCount++] = BOXUSER3;
+    activeBoxIds[activeBoxIdCount++] = BOXUSER4;
 #endif
 
 #if defined(USE_OSD) && defined(OSD_LAYOUT_COUNT)
