@@ -577,7 +577,6 @@ void changeDshotSpinRotation(dshotDirectionCommands_e directionSpin) {
             pwmRequestMotorTelemetry(i);
             pwmWriteMotor(i, directionSpin);
         }
-        delayMicroseconds(DSHOT_COMMAND_DELAY_US);
         pwmCompleteMotorUpdate();
 
     }
