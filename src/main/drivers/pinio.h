@@ -25,7 +25,7 @@
 
 #include "drivers/io_types.h"
 
-#define PINIO_COUNT             4
+#define PINIO_COUNT             5
 #define PINIO_FLAGS_INVERTED    0x80
 
 typedef struct pinioHardware_s {

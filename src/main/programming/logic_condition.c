@@ -42,7 +42,11 @@
 #include "sensors/pitotmeter.h"
 #include "flight/imu.h"
 #include "flight/pid.h"
+#ifdef USE_I2C_IO_EXPANDER
 #include "drivers/io_port_expander.h"
+#endif
+
+#include "io/piniobox.h"
 
 #include "navigation/navigation.h"
 #include "navigation/navigation_private.h"
@@ -276,12 +280,15 @@ static int logicConditionCompute(
             return operandA;
             break;
 
-#ifdef USE_I2C_IO_EXPANDER
         case LOGIC_CONDITION_PORT_SET:
+#ifdef USE_I2C_IO_EXPANDER
             ioPortExpanderSet((uint8_t)operandA, (uint8_t)operandB);
+            #error fump
+#else
+            pinioSet(operandA, !!operandB);
+#endif
             return operandB;
             break;
-#endif
 
         case LOGIC_CONDITION_SIN:
             temporaryValue = (operandB == 0) ? 500 : operandB;

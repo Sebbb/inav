@@ -55,7 +55,7 @@ void pinioBoxInit(void)
     for (int i = 0; i < PINIO_COUNT; i++) {
         const box_t *box = findBoxByPermanentId(pinioBoxConfig()->permanentId[i]);
 
-        pinioBoxRuntimeConfig.boxId[i] = box ? box->boxId : BOXID_NONE;
+        pinioBoxRuntimeConfig.boxId[i] = (box && pinioBoxConfig()->permanentId[i] != 255) ? box->boxId : BOXID_NONE;
     }
 }
 

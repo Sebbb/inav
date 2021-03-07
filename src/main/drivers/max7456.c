@@ -391,6 +391,10 @@ void max7456Init(const videoSystem_e videoSystem)
     // force soft reset on Max7456
     busWrite(state.dev, MAX7456ADD_VM0, MAX7456_RESET);
 
+    // align image
+    busWrite(state.dev, MAX7456ADD_VOS, 0x1e);
+//    busWrite(state.dev, MAX7456ADD_HOS, 0x1d);
+
     // DMM defaults to all zeroes on reset
     state.registers.dmm = 0;
     state.videoSystem = videoSystem;

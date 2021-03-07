@@ -49,14 +49,21 @@ const pinioHardware_t pinioHardware[] = {
 #if !defined(PINIO3_FLAGS)
 #define PINIO3_FLAGS 0
 #endif
-    { .ioTag = IO_TAG(PINIO3_PIN), .ioMode = IOCFG_OUT_PP, .flags = PINIO3_FLAGS },
+    { .ioTag = IO_TAG(PINIO3_PIN), .ioMode = IOCFG_OUT_OD, .flags = PINIO3_FLAGS },
 #endif
 
 #if defined(PINIO4_PIN)
 #if !defined(PINIO4_FLAGS)
 #define PINIO4_FLAGS 0
 #endif
-    { .ioTag = IO_TAG(PINIO4_PIN), .ioMode = IOCFG_OUT_PP, .flags = PINIO4_FLAGS },
+    { .ioTag = IO_TAG(PINIO4_PIN), .ioMode = IOCFG_OUT_OD, .flags = PINIO4_FLAGS },
+#endif
+
+#if defined(PINIO5_PIN)
+#if !defined(PINIO5_FLAGS)
+#define PINIO5_FLAGS 0
+#endif
+    { .ioTag = IO_TAG(PINIO5_PIN), .ioMode = IOCFG_OUT_OD, .flags = PINIO5_FLAGS },
 #endif
 };
 

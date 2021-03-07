@@ -118,6 +118,12 @@ static bool cxofOpflowUpdate(opflowData_t * data)
 
                     previousTimeUs = currentTimeUs;
                     newPacket = true;
+                } else if (pkt->header == 0xFE && pkt->footer == 0xBB) {
+                    // Valid packet
+                    tmpData.deltaTime += (currentTimeUs - previousTimeUs);
+                    tmpData.quality = 0;
+                    previousTimeUs = currentTimeUs;
+                    newPacket = true;
                 }
 
                 // Reset the decoder

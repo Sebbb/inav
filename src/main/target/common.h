@@ -125,7 +125,7 @@
 #define USE_D_BOOST
 #define USE_ANTIGRAVITY
 
-#define USE_I2C_IO_EXPANDER
+// #define USE_I2C_IO_EXPANDER
 
 #define USE_SERIALRX_SRXL2     // Spektrum SRXL2 protocol
 #define USE_TELEMETRY_SRXL

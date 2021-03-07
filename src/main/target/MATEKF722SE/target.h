@@ -146,8 +146,8 @@
 #define UART6_RX_PIN            PC7
      
 #define USE_SOFTSERIAL1
-#define SOFTSERIAL_1_TX_PIN      PA2
-#define SOFTSERIAL_1_RX_PIN      PA2
+#define SOFTSERIAL_1_TX_PIN      PA3
+#define SOFTSERIAL_1_RX_PIN      PA3
 
 #define SERIAL_PORT_COUNT       7
 
@@ -175,10 +175,13 @@
 #define USE_PINIOBOX
 #define PINIO1_PIN                  PC8 // VTX power switcher
 #define PINIO2_PIN                  PC9 // 2xCamera switcher
+#define PINIO3_PIN                  PA15 // S5
+#define PINIO4_PIN                  PA8 // LED
+#define PINIO5_PIN                  PB3 // S6
 
 // *************** LEDSTRIP ************************
-#define USE_LED_STRIP
-#define WS2811_PIN                  PA8
+//    #define USE_LED_STRIP
+//    #define WS2811_PIN                  PA8
 
 #define DEFAULT_FEATURES                (FEATURE_OSD | FEATURE_TELEMETRY | FEATURE_CURRENT_METER | FEATURE_VBAT | FEATURE_TX_PROF_SEL | FEATURE_BLACKBOX)
 #define CURRENT_METER_SCALE     179

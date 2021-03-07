@@ -1928,7 +1928,7 @@ groups:
         default_value: "200"
         field: max_surface_altitude
         min: 0
-        max: 1000
+        max: 1200
       - name: inav_w_z_surface_p
         field: w_z_surface_p
         min: 0
@@ -2143,7 +2143,7 @@ groups:
         max: 65000
       - name: nav_max_terrain_follow_alt
         field: general.max_terrain_follow_altitude
-        max: 1000
+        max: 1100
       - name: nav_rth_altitude
         description: "Used in EXTRA, FIXED and AT_LEAST rth alt modes [cm] (Default 1000 means 10 meters)"
         default_value: "1000"
